@@ -1,0 +1,249 @@
+//========================================================================================================================================================
+.header {
+	padding: 89px 0;
+
+	@media (max-width: rem(1500)){
+		padding: 40px 0;  
+	}
+
+	@media (max-width: rem(768)){
+		padding: 25px 0;  
+	}
+
+	// .header__container
+
+	&__container {
+		display: flex;
+		align-items: center;
+	}
+
+	// .header__logo
+
+	&__logo {
+		width: 100%;
+		max-width: rem(132);
+
+		@media (max-width: rem(768)){
+			max-width: rem(100);
+		}
+
+		@media (max-width: rem(400)){
+			max-width: rem(80);
+		}
+	}
+
+	// .header__menu
+
+	.menu {
+		margin-left: auto;
+
+		// .menu_list
+	
+		&_list {
+			display: flex;
+			align-items: center;
+			column-gap: 45px;
+			margin-right: 42px;
+
+			@media (max-width: rem(768)){
+				column-gap: 5px;
+				margin-right: 5px;
+			}
+		}
+	
+		// .menu__item
+	
+		&__item {
+		}
+	
+		// .menu__link
+	
+		&__link {
+			display: block;
+			position: relative;
+			padding: 10px 30px;
+			// border: 1px solid #ffffff;
+			font-weight: 400;
+			font-size: rem(18);
+			line-height: 100%;
+			letter-spacing: -0.045em;
+			color: #FFFFFF;
+
+			@media (max-width: rem(768)){
+				font-size: rem(12); 
+				padding: 5px 15px; 
+			}
+
+			&::after{
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: auto 100%;
+				opacity: 0;
+				transition: opacity .3s ease;
+			}
+
+			&--first {
+				&::after{
+					background-image: url(@img/menu-btn-1-border.svg);
+				}
+			}
+
+			&--two {
+				&::after{
+					background-image: url(@img/menu-btn-2-border.svg);
+				}
+			}
+
+			&--active {
+				&::after{
+					opacity: 1;
+				}
+			}
+
+			&:hover {
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	// .header__select
+
+	&__select {
+
+		.select {
+			&__title {
+				border: none;
+				background-color: transparent;
+				border-radius: 0;
+				display: block;
+			}
+
+			&__value {
+				padding: 0;
+				height: auto;
+				position: relative;
+				padding-right: 20px;
+
+				@media (max-width: rem(768)){
+					padding-right: 15px;
+				}
+
+				&::after {
+					content:'';
+					position: absolute;
+					top: 5px;
+					right: 0;
+					width: 11px;
+					height: 6px;
+					background-image: url(@img/arrow.svg);
+					background-repeat: no-repeat;
+					background-size: cover;
+
+					@media (max-width: rem(768)){
+						top: 3px;
+					}
+				}
+			}
+			
+			&__content {
+				width: 22px;
+				font-weight: 700;
+				font-size: rem(18);
+				line-height: 100%;
+				letter-spacing: -0.045em;
+				color: #FFFFFF;
+
+				@media (max-width: rem(768)){
+					font-size: rem(14);
+				}
+			}
+
+			&__options {
+				top: 15px;
+				border: none;
+				border-radius: 0;
+				background-color: transparent;
+			}
+
+			&__option {
+				font-weight: 700;
+				font-size: rem(18);
+				line-height: 100%;
+				letter-spacing: -0.045em;
+				color: #FFFFFF;
+				padding: 5px 0;
+
+				@media (max-width: rem(768)){
+					font-size: rem(14);
+				}
+
+				&:hover {
+					background-color: transparent !important;
+					padding: 5px 0;
+				}
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/

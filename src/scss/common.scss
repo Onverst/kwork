@@ -1,0 +1,22 @@
+* {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+.wrapper {
+    position: relative;
+    background-color: #000000;
+}
+
+.publishing {
+    background-image: url(@img/publishing-bg.svg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.about {
+    background-image: url(@img/about-bg.svg);
+    background-position: left bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
